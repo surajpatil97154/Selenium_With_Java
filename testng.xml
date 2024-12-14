@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="parallelTests"  parallel="tests" thread-count="3">
+  <test name="TestOnChrome">
+  	<parameter name="browser" value="chrome"/>
+  	<parameter name="hubURL" value="http://192.168.1.2:4444/wd/hub"/>
+    <classes>
+      <class name="parallelTests.SeleniumGrid"/>
+    </classes>
+  </test> 
+  <test name="TestOnFirefox">
+  	<parameter name="browser" value="firefox"/>
+  	<parameter name="hubURL" value="http://192.168.1.2:4444/wd/hub"/>
+    <classes>
+      <class name="parallelTests.SeleniumGrid"/>
+    </classes>
+  </test><!-- Test -->
+</suite> <!-- Suite -->

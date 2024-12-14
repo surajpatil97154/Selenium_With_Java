@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [parallelTests]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="TestOnFirefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="hubURL" value="http://192.168.1.3:4444/wd/hub"/>
+    <classes>
+      <class name="parallelTests.SeleniumGrid">
+        <methods>
+          <include name="setup"/>
+          <include name="testMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- parallelTests.SeleniumGrid -->
+    </classes>
+  </test> <!-- TestOnFirefox(failed) -->
+  <test thread-count="3" parallel="tests" name="TestOnChrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="hubURL" value="http://192.168.1.3:4444/wd/hub"/>
+    <classes>
+      <class name="parallelTests.SeleniumGrid">
+        <methods>
+          <include name="setup"/>
+          <include name="testMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- parallelTests.SeleniumGrid -->
+    </classes>
+  </test> <!-- TestOnChrome(failed) -->
+</suite> <!-- Failed suite [parallelTests] -->
